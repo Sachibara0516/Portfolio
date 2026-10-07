@@ -619,10 +619,19 @@ button { color: inherit; }
 .education-list h4 { margin: 0; font-size: 1.08rem; line-height: 1.25; }
 .education-list p { margin: .35rem 0; color: #61645b; font-size: .78rem; }
 .education-list strong { color: var(--violet); font-size: .72rem; }
-.certificate-list ul { margin: 0; padding: 0; border-top: 1px solid var(--line); list-style: none; }
-.certificate-list li { display: grid; grid-template-columns: 42px 1fr; gap: 1rem; align-items: center; min-height: 60px; border-bottom: 1px solid var(--line); }
-.certificate-list li span { color: var(--violet); font-size: .64rem; font-weight: 850; }
-.certificate-list li p { margin: 0; font-size: .83rem; font-weight: 700; }
+.certificate-gallery { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+.certificate-card { overflow: hidden; border: 1px solid var(--line); border-radius: 1rem; background: #fff; }
+.certificate-image { display: block; padding: .65rem; background: #f2f0f8; border-bottom: 1px solid var(--line); }
+.certificate-image img { display: block; width: 100%; height: 170px; object-fit: contain; border-radius: .6rem; background: #fff; }
+.certificate-copy { display: grid; grid-template-columns: 30px 1fr; gap: .8rem; padding: 1rem; align-items: start; }
+.certificate-copy > span { color: var(--violet); font-size: .64rem; font-weight: 850; }
+.certificate-copy h4 { margin: 0; font-size: .86rem; line-height: 1.35; }
+.certificate-copy a { display: inline-block; margin-top: .45rem; color: var(--violet); font-size: .7rem; font-weight: 850; text-decoration: none; }
+.certificate-copy a:hover { text-decoration: underline; text-underline-offset: .2rem; }
+.additional-credentials { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.additional-credentials > p { margin: 0 0 .7rem; color: #777a71; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; }
+.additional-credentials ul { margin: 0; padding-left: 1.1rem; color: #55584f; font-size: .78rem; }
+.additional-credentials li + li { margin-top: .35rem; }
 .references-note { margin: 3rem 0 0; color: #777a71; font-family: var(--serif); font-style: italic; }
 
 .contact-section { padding-block: clamp(7rem, 11vw, 11rem); color: var(--white); background: var(--ink); }
@@ -988,4 +997,9 @@ body {
 @media (max-width: 640px) {
   .site-header { width: calc(100% - 1rem); }
   .project-card { padding: .7rem; border-radius: 1.35rem; }
+}
+
+@media (max-width: 680px) {
+  .certificate-gallery { grid-template-columns: 1fr; }
+  .certificate-image img { height: 210px; }
 }
