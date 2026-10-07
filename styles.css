@@ -210,6 +210,9 @@ button { color: inherit; }
 
 .hero-lead strong { color: var(--ink); }
 
+
+.hero-role-tags { display: flex; flex-wrap: wrap; gap: .55rem; margin: 1.1rem 0 1.7rem; }
+.hero-role-tags span { padding: .5rem .72rem; color: #4b3f64; background: rgba(218,217,255,.55); border: 1px solid rgba(79,50,72,.16); border-radius: 999px; font-size: .67rem; font-weight: 800; letter-spacing: .02em; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2.2rem; }
 
 .button {
@@ -1016,4 +1019,9 @@ body {
   .profile-section { grid-template-columns: 1fr; }
   .profile-photo { max-width: 320px; }
   .profile-notes { grid-column: auto; }
+}
+
+@media (max-width: 680px) {
+  .hero-role-tags { gap: .45rem; }
+  .hero-role-tags span { font-size: .63rem; }
 }
